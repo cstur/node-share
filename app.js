@@ -1,7 +1,7 @@
 var http = require('http');
 var fs = require('fs');
 var EventEmitter = require('events').EventEmitter;
-var myModule = require('./module');
+var Hello = require('./module');
 
 http.createServer(function(req, res) {
 	res.writeHead(200, {
@@ -29,8 +29,9 @@ http.createServer(function(req, res) {
 	}, 3000);
 
 	/* Module */
-	myModule.setName('Stur');
-	myModule.sayHello();
+	hello = new Hello();
+	hello.setName('Stur');
+	hello.sayHello();
 
 	res.write('<h1>NodeJS</h1>');
 	res.end('<p>Hello CheZheng</p>');

@@ -10,6 +10,6 @@ function Hello() {
 };
 
 //exports.Hello = Hello;
-//require('./singleobject').Hello
+//require('./module').Hello
 
 module.exports = Hello;
